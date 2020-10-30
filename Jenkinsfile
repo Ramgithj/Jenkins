@@ -2,15 +2,14 @@
 pipeline{
   agent any
   stages{
-    stage("create a file") {
+    stage("create a variable") {
       steps {
-        sh 'vim aFile'
-        sh '"Hello this is a file"'
+        sh 'echo "Hello this is a file"'
       }
     }
     stage ("Print the file") {
       steps {
-        sh 'cat aFile'
+        sh 'cat helloWorld'
       }
     }
   }
